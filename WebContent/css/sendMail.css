@@ -1,0 +1,89 @@
+.main
+{
+	width:1000px;
+	height:1000px;
+	margin:0 auto;
+	/*background-color:silver;*/
+	
+}
+.mail
+{
+	width:820px;
+	height:980px;
+	float:left;
+	
+	border:1px solid #777;
+	/*background-color:gray;*/
+    margin-right:20px;
+	margin-top:20px;
+	margin-left:8px;
+}
+.mail_right
+{
+	width:150px;
+	height:1000px;
+	float:left;
+	/*background-color:yellow;*/
+}
+.title
+{
+	height:40px;
+	line-height:35px;
+	float:left;
+	width:810px;
+	padding-left:10px;
+	
+	/*background-color:green;*/
+	border-bottom:1px solid #777;
+	
+}
+
+.span1
+{
+	background-color:#596C94;
+}
+.publish_mail
+{
+	float:left;
+	width:820px;
+	padding-left:10px;
+	padding-top:20px;
+	
+}
+
+
+.publish_mail
+{
+	
+}
+.page
+{
+	float:right;
+	line-height:30px;
+	padding-right:20px;
+}
+.page input
+{
+		padding-right:50px;
+}
+.tr1
+{
+	line-height:30px;
+}
+.mail_content
+{
+	height:100px;
+	width:700px;
+	
+	float:left;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	/*background-color:blue;*/
+	
+}
+.mail_content input
+{
+	height:90px;
+	width:700px;
+	
+}

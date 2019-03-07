@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 映射文件需要dtd指定格式 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiaonei.domain">
+	<class name="Senior" lazy="true">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="name" length="64" />
+		</property>
+
+		<many-to-one name="city" column="cityId"/>
+		
+		<many-to-one name="town" column="townId"/>
+		<set name="userSeniors" >
+			
+			<key>
+				<column name="seniorSchId"/>
+			</key>
+			<one-to-many class="UserSenior"/>
+		</set>
+			
+		
+	</class>
+
+</hibernate-mapping>

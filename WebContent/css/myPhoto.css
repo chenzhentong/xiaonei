@@ -1,0 +1,134 @@
+.main
+{
+	height:750px;
+	width:1000px;
+	margin:0 auto;
+	
+	
+	/*background-color:pink;*/
+}
+.editAlbum
+{
+	width:858px;
+	height:570px;
+	float:left;
+	/*background-color:silver;*/
+	margin:5px;	
+	border:1px solid black;
+}
+
+
+.rightAdvice
+{
+	width:130px;
+	height:750px;
+	float:left;
+	
+	
+	/*background-color:yellow;*/
+}
+.title
+{
+	padding-top:10px;
+	padding-left:10px;
+	float:left;
+	width:848px;
+	height:30px;
+	/*background-color:silver;*/
+	
+}
+
+.photoPageHead
+{
+	width:848px;
+	height:20px;
+	/*background-color:orange;*/
+	float:left;
+
+	border-bottom:1px solid black;
+}
+
+.photoPageHead .right
+{
+   
+	float:right;
+}
+.td1
+{
+	width:100px;
+}
+a.aStyle
+{
+	background-color:#3A5794;
+	
+}
+.photo
+{
+	width:682px;
+	height:460px;
+	
+    padding-top:10px;
+    padding-left:175px;
+	
+	float:left;
+	/*background-color:red;*/
+	
+}
+.photo .img
+{
+	width:450px;
+	height:450px;
+	float:left;
+	
+}
+.description
+{
+	float:left;
+	width:848px;
+	height:50px;
+	/*background-color:#666;*/
+	padding-left:10px;
+}
+.description table
+{
+	width:830px;
+}
+.description .td4
+{
+	float:right;
+}
+.photoPageTail
+{
+	height:20px;
+	float:left;
+	width:856px;
+	padding-right:2px;
+/*	background-color:blue;*/
+}
+.photoPageTail .right
+{
+	float:right;
+}
+.comment
+{
+	width:600px;
+	height:100px;
+	float:left;
+	/*background-color:purple;*/
+	
+	
+}
+.comment1
+{
+	width:400px;
+	height:70px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+.comment1 .input1
+{
+	
+	width:400px;
+	height:100px;
+	
+}

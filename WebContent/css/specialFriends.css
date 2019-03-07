@@ -1,0 +1,65 @@
+.main
+{
+	width:1000px;
+	height:1000px;
+	margin:0 auto;
+	/*background-color:silver;*/
+	
+}
+.myFriends
+{
+	width:850px;
+	height:1000px;
+	float:left;
+	/*background-color:gray;*/
+}
+.friends_right
+{
+	width:150px;
+	height:1000px;
+	float:left;
+	/*background-color:yellow;*/
+}
+.title
+{
+	height:50px;
+	line-height:30px;
+	float:left;
+	width:840px;
+	padding-left:10px;
+	padding-top:20px;
+	/*background-color:green;*/
+}
+.friend_table
+{
+	padding-top:100px;
+	padding-left:10px;
+	height:50px;
+	
+	float:left;
+}
+.friend_table table
+{
+	
+	background-color:white;
+	color:black;
+}
+.span1
+{
+	background-color:#596C94;
+}
+
+.display_friend
+{
+	width:800px;
+	height:300px;
+	float:left;
+	
+	border:1px solid black;
+	
+}
+.description
+{
+	
+}
+

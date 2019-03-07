@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 映射文件需要dtd指定格式 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiaonei.domain">
+	<class name="Country" lazy="true">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="name" length="32" />
+		</property>
+	
+		<set name="provinces" >
+			
+			<key>
+				<column name="countryId"/>
+			</key>
+			<one-to-many class="Province"/>
+		</set>
+		
+		<set name="universities" >
+			
+			<key>
+				<column name="countryId"/>
+			</key>
+			<one-to-many class="University"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

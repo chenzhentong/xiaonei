@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC   "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"   "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="userForm" type="com.xiaonei.web.forms.UserForm"/>
+		<form-bean name="blogsortForm" type="com.xiaonei.web.forms.BlogsortForm"/>
+		<form-bean name="blogForm" type="com.xiaonei.web.forms.BlogForm"/>
+		<form-bean name="messageForm" type="com.xiaonei.web.forms.MessageForm"/>
+		<form-bean name="albumsortForm" type="com.xiaonei.web.forms.AlbumsortForm"/>
+		<form-bean name="albumForm" type="com.xiaonei.web.forms.AlbumForm"/>
+		<form-bean name="friendForm" type="com.xiaonei.web.forms.FriendForm"/>
+		<form-bean name="specialfriendForm" type="com.xiaonei.web.forms.SpecialfriendForm"/>
+		<form-bean name="usermessagecommentForm" type="com.xiaonei.web.forms.UsermessagecommentForm"/>
+		<form-bean name="mailForm" type="com.xiaonei.web.forms.MailForm"/>
+	</form-beans>
+	<action-mappings>
+
+		<action path="/test" >
+
+			<forward name="showAllCountry" path="/WEB-INF/test/showAllCountry.jsp" />
+			
+		</action>
+		<action path="/mail" name="mailForm" parameter="flag">
+
+			<forward name="sendMail" path="/WEB-INF/self/sendMail.jsp" />
+			
+		</action>
+		<action path="/register"  parameter="flag" name="userForm">
+
+			<forward name="goToRegister" path="/WEB-INF/public/register.jsp" />
+			<forward name="goHome" path="/WEB-INF/public/home.jsp" />
+		</action>
+		<action path="/login"  parameter="flag" name="userForm">
+
+			
+			<forward name="goHome" path="/WEB-INF/public/home.jsp" />
+			<forward name="logout" path="/WEB-INF/public/index.jsp" />
+		</action>
+		<action path="/modify"  parameter="flag" name="userForm">
+
+			
+			<forward name="baseInfo" path="/WEB-INF/self/baseInfo.jsp" />
+			<forward name="contractInfo" path="/WEB-INF/self/contractInfo.jsp" />
+			<forward name="selfInfo" path="/WEB-INF/self/selfInfo.jsp" />
+			<forward name="schoolInfo" path="/WEB-INF/self/schoolInfo.jsp" />
+			<forward name="workInfo" path="/WEB-INF/self/workInfo.jsp" />
+			<forward name="uploadPhoto" path="/WEB-INF/self/uploadPhoto.jsp" />
+		</action>
+	<action path="/profile"  parameter="flag" >
+
+			<forward name="goHome" path="/WEB-INF/public/home.jsp" />
+			<forward name="goHomePage" path="/WEB-INF/self/homePage.jsp" />
+			<forward name="goMyApplication" path="/WEB-INF/self/myApplication.jsp" />
+		</action>
+        <action path="/album"  parameter="flag" name="albumForm">
+
+			<forward name="goAddAlbum" path="/WEB-INF/self/addAlbum.jsp" />
+			
+			<forward name="myPhoto" path="/WEB-INF/self/myPhoto.jsp" />
+		</action>
+		<action path="/albumsort"  parameter="flag" name="albumsortForm">
+            <forward name="addPhoto" path="/WEB-INF/self/addPhoto.jsp" />
+			
+		</action>
+		<action path="/blog"  parameter="flag" name="blogForm">
+		
+
+			<forward name="publishBlog" path="/WEB-INF/self/publishBlog.jsp" />
+			<forward name="addBlogSort" path="/WEB-INF/self/addBlogSort.jsp" />
+			<forward name="manageBlog" path="/WEB-INF/self/manageBlog.jsp" />
+		</action>
+		<action path="/blogsort"  parameter="flag" name="blogsortForm">
+		
+
+			
+		</action>
+		 <action path="/friend"  parameter="flag" name="friendForm">
+
+			<forward name="myFriends" path="/WEB-INF/self/myFriends.jsp" />
+			<forward name="onlineFriends" path="/WEB-INF/self/onlineFriends.jsp" />
+			<forward name="specialFriends" path="/WEB-INF/self/specialFriends.jsp" />
+			
+			<forward name="possibleFriends" path="/WEB-INF/self/possibleFriends.jsp" />
+			<forward name="inviteFriends" path="/WEB-INF/self/inviteFriends.jsp" />
+			
+			
+		</action>
+		 <action path="/specialfriend"  parameter="flag" name="specialfriendForm">
+
+			
+			
+		</action>
+		<action path="/search"  parameter="flag" name="userForm">
+
+			<forward name="searchFriends" path="/WEB-INF/self/searchFriends.jsp" />
+			
+			<forward name="friendsSearchResult" path="/WEB-INF/self/friendsSearchResult.jsp" />
+		</action>
+		<action path="/message"  parameter="flag" name="messageForm">
+
+			<forward name="goHomePage" path="/WEB-INF/self/homePage.jsp" />
+		</action>
+		<action path="/usermessagecomment"  parameter="flag" name="usermessagecommentForm">
+
+			
+		</action>
+		
+
+	
+
+	</action-mappings>
+	
+	<!-- 配置全局跳转 -->
+	 <global-forwards>
+		<forward name="message" path="/WEB-INF/public/message.jsp" />
+
+	</global-forwards> 
+
+	<!-- 配置代理请求处理 -->
+	<controller>
+		<set-property
+			value="org.springframework.web.struts.DelegatingRequestProcessor"
+			property="processorClass" />
+	</controller>
+</struts-config>

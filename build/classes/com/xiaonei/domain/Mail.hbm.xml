@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 映射文件需要dtd指定格式 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiaonei.domain">
+	<class name="Mail" lazy="true" table="mail">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+		
+
+		<many-to-one name="sender" column="senderId"/>
+		
+		<many-to-one name="receiver" column="receiverId"/>
+		<property name="content" type="java.lang.String">
+			<column name="content" length="128" />
+		</property>
+		<property name="sendDate" type="java.util.Date">
+			<column name="sendDate" />
+		</property>
+		
+	</class>
+
+</hibernate-mapping>

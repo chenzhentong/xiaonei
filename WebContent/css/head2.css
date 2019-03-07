@@ -1,0 +1,35 @@
+.head2 {
+	width: 1000px;
+	height: 101px;
+	background-color: #3b5888;
+	margin: 0 auto;
+}
+
+.img1 {
+	width: 713px;
+	float: left;
+}
+
+.img2 {
+	width: 280px;
+	float: left;
+	margin-left: 5px;
+}
+
+.img3 {
+	top: 3px;
+	position: relative;
+}
+
+.nav {
+	float: right;
+}
+
+.nav li {
+	list-style-type: none;
+	float: left;
+	font-size: 12px;
+	width: 60px;
+	line-height: 33px;
+	text-align: center;
+}

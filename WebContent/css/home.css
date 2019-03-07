@@ -1,0 +1,105 @@
+.home
+{
+	width:1000px;
+	height:1000px;
+	margin:0 auto;
+	/*background-color:pink;*/
+}
+.apply
+{
+	width:200px;
+	
+	line-height:30px;
+	float:left;
+	padding-left:20px;
+	padding-top:20px;
+	/*background-color:green;*/
+}
+.apply .table1
+{
+	height:225px;
+	float:center;
+	
+	
+	
+	/*background-color:silver;*/
+
+}
+.apply .table1 table
+{
+	width:160px;
+	
+	
+	/*border:1px solid black;*/
+}
+.home .per_info
+{
+	width:500px;
+	height:1000px;
+	float:left;
+	/*background-color: yellow;*/
+}
+.home .relative_info
+{
+	position:relative;
+	
+	width:280px;
+	height:950px;
+	float:left;
+	
+}
+
+.table2,.table3,.table4,.table5
+{
+	
+	padding:10px;
+}
+.per_info
+{
+	width:460px;
+
+}
+.edit_info
+{
+	/*background-color:skyblue;*/
+	padding-top:20px;
+	float:left;
+	width:500px;
+	height:180px;
+	
+}
+.photo_info
+{
+	padding-right:20px;
+	float:left;
+	width:220px;
+	height:180px;
+}
+.right_info
+{
+	float:left;
+	line-height:50px;
+	height:180px;
+}
+
+
+.message
+{
+	
+	padding:20px;
+    line-height:30px;
+    background-color:orange;
+   
+}
+.img4
+{
+	width:50px;
+	height:50px;
+}
+.news
+{
+	padding-right:20px;
+	/*background-color:blue;*/
+	
+	line-height:30px;
+}

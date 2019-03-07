@@ -1,0 +1,66 @@
+.main
+{
+	height:750px;
+	width:1000px;
+	margin:0 auto;
+	
+	
+	/*background-color:pink;*/
+}
+.editAlbum
+{
+	width:858px;
+	height:300px;
+	float:left;
+	/*background-color:silver;*/
+	margin:5px;	
+	border:1px solid black;
+}
+
+
+.rightAdvice
+{
+	width:130px;
+	height:750px;
+	float:left;
+	
+	
+	background-color:yellow;
+}
+.title
+{
+	padding-top:10px;
+	padding-left:10px;
+	float:left;
+	width:846px;
+	height:70px;
+	/*background-color:silver;*/
+}
+.choice
+{
+	padding-left:20px;
+	padding-top:20px;
+	border-bottom:1px solid black;
+}
+.td1
+{
+	width:100px;
+}
+a.aStyle
+{
+	background-color:#3A5794;
+	
+}
+.message
+{
+	padding-top:10px;
+	padding-left:50px;
+	width:100px;
+	/*background-color:yellow;*/
+	float:left;
+}
+.addPhoto
+{
+	padding-top:10px;
+	float:left;
+}

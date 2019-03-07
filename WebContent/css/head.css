@@ -1,0 +1,41 @@
+.head{
+	width:1000px;
+	height:101px;
+	background-color: #3b5888;
+	margin:0 auto;
+	
+	
+}
+.head .img1{
+	width:713px;
+	
+	float:left;
+	
+	
+}
+.head .img2{
+	
+	width:280px;
+	float:left;
+	margin-left: 5px;
+
+	
+}
+.nav{
+	float:right;
+	
+}
+.nav li{
+	list-style-type: none;
+	float:left;
+
+	font-size:12px;
+	width:55px;
+
+	line-height:33px;
+	text-align: center;
+	
+	
+	
+	
+}

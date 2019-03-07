@@ -1,0 +1,50 @@
+.main
+{
+	height:750px;
+	width:1000px;
+	margin:0 auto;
+	
+	
+	/*background-color:pink;*/
+}
+.application
+{
+	width:858px;
+	height:570px;
+	float:left;
+	/*background-color:silver;*/
+	margin:5px;	
+	border:1px solid black;
+}
+
+
+.rightAdvice
+{
+	width:130px;
+	height:750px;
+	float:left;
+	
+	
+	/*background-color:yellow;*/
+}
+.title
+{
+	padding-top:10px;
+	padding-left:10px;
+	float:left;
+	width:848px;
+	height:30px;
+	/*background-color:silver;*/
+	
+}
+
+.allApplication
+{
+	width:848px;
+	height:200px;
+	/*background-color:orange;*/
+	float:left;
+
+	/*border-bottom:1px solid black;*/
+}
+

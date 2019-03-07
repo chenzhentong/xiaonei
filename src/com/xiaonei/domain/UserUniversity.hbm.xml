@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 映射文件需要dtd指定格式 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiaonei.domain">
+	<class name="UserUniversity" lazy="true" table="useruniversity">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+		<many-to-one name="users" column="userId"/>
+		
+		<many-to-one name="university" column="universityId"/>
+		
+		<property name="uniYear" type="java.lang.Integer">
+			<column name="uniYear"  />
+		</property>
+	   <property name="userType" type="java.lang.String">
+			<column name="userType" length="32" />
+		</property>
+		<property name="college" type="java.lang.String">
+			<column name="college" length="128" />
+		</property>
+		<property name="drom" type="java.lang.String">
+			<column name="drom" length="128" />
+		</property>
+		
+
+	
+		
+		
+	</class>
+
+</hibernate-mapping>

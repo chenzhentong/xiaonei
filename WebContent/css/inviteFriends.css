@@ -1,0 +1,115 @@
+.invite_way
+{
+	/*padding-left:50px;
+	padding-right:50px;*/
+	
+	width:800px;
+	
+	/*background-color:silver;*/
+	height:300px;
+	float:left;
+}
+.way1
+{
+	padding-left:150px;
+	padding-top:20px;
+	
+	width:180px;
+	float:left;
+}
+.way2
+{
+	padding-left:50px;
+	padding-top:20px;
+	
+	width:180px;
+	float:left;
+}
+.way3
+{
+	padding-left:150px;
+	padding-top:20px;
+	
+	width:180px;
+	float:left;
+}
+.way4
+{
+	padding-left:50px;
+	padding-top:20px;
+	
+	width:180px;
+	float:left;
+}
+.way5
+{
+	padding-left:150px;
+	padding-top:20px;
+	
+	width:180px;
+	float:left;
+}
+.way6
+{
+	padding-left:50px;
+	padding-top:20px;
+	
+	width:180px;
+	float:left;
+}
+.main
+{
+	width:1000px;
+	height:1000px;
+	margin:0 auto;
+	/*background-color:silver;*/
+	
+}
+.myFriends
+{
+	margin-top:2px;
+	width:848px;
+	height:360px;
+	float:left;
+	/*background-color:gray;*/
+	border:1px solid black;
+}
+.friends_right
+{
+	width:150px;
+	height:1000px;
+	float:left;
+	/*background-color:yellow;*/
+}
+.title
+{
+	height:50px;
+	line-height:30px;
+	float:left;
+	width:840px;
+	padding-left:10px;
+	padding-top:20px;
+	/*background-color:green;*/
+}
+.friend_table
+{
+	padding-top:100px;
+	padding-left:10px;
+	height:50px;
+	
+	float:left;
+}
+.friend_table table
+{
+	
+	background-color:white;
+	color:black;
+}
+.span1
+{
+	background-color:#596C94;
+}
+.display_friend
+{
+	border:1px solid black;
+}

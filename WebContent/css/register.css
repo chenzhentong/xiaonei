@@ -1,0 +1,112 @@
+.reg_main_frame {
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 3px;
+}
+
+.play_itmes {
+	width: 270px;
+	height: 600px;
+	float: left;
+}
+
+.play_itmes img {
+	float: right;
+}
+
+.reg_table1 {
+	width: 727px;
+	margin-left: 3px;
+	float: left;
+}
+
+.reg_table1 table {
+	width: 600px;
+	line-height: 30px;
+}
+
+.tab_td1 {
+	width: 110px;
+	text-align: right;
+	font-size: 12px;
+	font-weight: bold;
+	color: #808080;
+	padding-right: 10px;
+	height: 30px;
+}
+
+.tab_td3 {
+	text-align: left;
+	font-size: 12px;
+	font-weight: bold;
+	color: #808080;
+	padding-right: 10px;
+	height: 30px;
+}
+
+.tab_td2 {
+	width: 200px;
+}
+
+.input1 {
+	line-height: 20px;
+}
+
+.div_uni {
+	display: block;
+	position: absolute;
+	top: 90px;
+	left: 850px;
+	border: 2px solid #3B5989;
+	width: 500px;
+	height: 450px;
+	background-color: #D7DFEA;
+	padding:2px;
+	
+}
+.country_div
+{
+	
+	border:1px solid #C5C5C5;
+	margin:2px;
+	background-color:white;
+	padding:5px;
+}
+.province_div
+{
+	
+	border:1px solid #C5C5C5;
+	margin:2px;
+	background-color:white;
+	padding:5px;
+}
+.university_div
+{
+	margin:2px;
+	border:1px solid #C5C5C5;
+	padding-left:20px;
+	padding-top:5px;
+	height:280px;
+	overflow:auto;
+	
+	background-color:white;
+}
+#div_uni
+{
+	display:none;
+}
+.btn1
+{
+	background-color:#2C4970;
+	color:white;
+	float:right;
+	margin:10px;
+	width:75px;
+	height:20px;
+	line-height:10px;
+}
+.gra_spe,.worker_sep,.midstu
+{
+	display:none;
+}

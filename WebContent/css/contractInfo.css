@@ -1,0 +1,28 @@
+.modifyContractInfo
+{
+	height:200px;
+	width:858px;
+	/*background-color:yellow;*/
+	float:left;
+}
+.privateSetup
+{
+	width:852px;
+	height:30px;
+	line-height:30px;
+	margin-left:2px;
+	margin-top:2px;
+	/*background-color:silver;*/
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	border:1px solid silver;
+}
+.contractInfoForm
+{
+	height:130px;
+	padding-left:150px;
+	/*background-color:orange;*/
+	float:left;
+	padding-top:20px;
+}

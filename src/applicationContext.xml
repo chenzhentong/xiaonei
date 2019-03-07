@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<!-- 在容器文件中配置bean(domain/dao/service/action/数据源) -->
+	<!-- 当spring框架加载时spring会自动创建一个bean -->
+	<!-- 测试spring -->
+	<!-- <bean id="testService" class="com.xiaonei.test.TestService" > <property 
+		name="name" value="测试"/> </bean> -->
+
+
+	<!-- 配置数据源 -->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="username" value="root" />
+		<property name="password" value="123456" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/xiaoneinew?useSSL=false&amp;serverTimezone=UTC&amp;characterEncoding=utf-8" />
+		<!-- 连接池启动时的初始值 -->
+		<property name="initialSize" value="3" />
+		<!-- 连接池的最大值 -->
+		<!--<property name="maxActive" value="500"/> -->
+		<!-- 最大空闲值,当经过一个高峰时间后，连接池可以慢慢已经用不到的连接释放一部分 -->
+		<property name="maxIdle" value="2" />
+		<!-- 最小空闲值，当空闲的连接数小于阈值时，连接池会预申请一些连接，以免洪峰来时 -->
+		<property name="minIdle" value="1" />
+	</bean>
+	<!-- 配置SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- 设置数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 接管hibernate的对象关系映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/xiaonei/domain/Country.hbm.xml</value>
+				<value>com/xiaonei/domain/Province.hbm.xml</value>
+				<value>com/xiaonei/domain/City.hbm.xml</value>
+				<value>com/xiaonei/domain/Town.hbm.xml</value>
+				<value>com/xiaonei/domain/Junior.hbm.xml</value>
+				<value>com/xiaonei/domain/PrimarySchool.hbm.xml</value>
+				<value>com/xiaonei/domain/Senior.hbm.xml</value>
+				<value>com/xiaonei/domain/TechSchool.hbm.xml</value>
+				<value>com/xiaonei/domain/Users.hbm.xml</value>
+				<value>com/xiaonei/domain/UserSenior.hbm.xml</value>
+				<value>com/xiaonei/domain/University.hbm.xml</value>
+				<value>com/xiaonei/domain/UserUniversity.hbm.xml</value>
+				<value>com/xiaonei/domain/UserNet.hbm.xml</value>
+				<value>com/xiaonei/domain/Message.hbm.xml</value>
+				<value>com/xiaonei/domain/Usermessagecomment.hbm.xml</value>
+				<value>com/xiaonei/domain/Blogsort.hbm.xml</value>
+				<value>com/xiaonei/domain/Blog.hbm.xml</value>
+				<value>com/xiaonei/domain/Blogagree.hbm.xml</value>
+				<value>com/xiaonei/domain/Album.hbm.xml</value>
+				<value>com/xiaonei/domain/Albumsort.hbm.xml</value>
+				<value>com/xiaonei/domain/Friend.hbm.xml</value>
+				<value>com/xiaonei/domain/Uservisited.hbm.xml</value>
+				<value>com/xiaonei/domain/Specialfriend.hbm.xml</value>
+				<value>com/xiaonei/domain/Mail.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				<!-- hibernate.current_session_context_class=thread -->
+				<!-- hibernate.hbm2ddl.auto=create -->
+				hibernate.show_sql=true
+				<!-- hibernate.format_sql=true -->
+			</value>
+		</property>
+	</bean>
+
+	<bean id="testService" class="com.xiaonei.service.TestService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="countryService"
+		class="com.xiaonei.service.imp.CountryService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="provinceService"
+		class="com.xiaonei.service.imp.ProvinceService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="cityService" class="com.xiaonei.service.imp.CityService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="universityService"
+		class="com.xiaonei.service.imp.UniversityService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="userUniversityService"
+		class="com.xiaonei.service.imp.UserUniversityService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="messageService"
+		class="com.xiaonei.service.imp.MessageService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="usermessagecommentService"
+		class="com.xiaonei.service.imp.UsermessagecommentService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="blogsortService"
+		class="com.xiaonei.service.imp.BlogsortService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="blogService"
+		class="com.xiaonei.service.imp.BlogService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="blogagreeService"
+		class="com.xiaonei.service.imp.BlogagreeService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="albumsortService"
+		class="com.xiaonei.service.imp.AlbumsortService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="albumService"
+		class="com.xiaonei.service.imp.AlbumService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="friendService"
+		class="com.xiaonei.service.imp.FriendService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="specialfriendService"
+		class="com.xiaonei.service.imp.SpecialfriendService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="uservisitedService"
+		class="com.xiaonei.service.imp.UservisitedService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="mailService"
+		class="com.xiaonei.service.imp.MailService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<bean id="userService" class="com.xiaonei.service.imp.UserService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 配置action -->
+	<bean name="/test" class="com.xiaonei.web.actions.TestAction"
+		scope="prototype">
+		<property name="testService" ref="testService" />
+
+	</bean>
+	<bean name="/register"
+		class="com.xiaonei.web.actions.RegisterAction" scope="prototype">
+		<property name="countryService" ref="countryService" />
+		<property name="provinceService" ref="provinceService" />
+		<property name="universityService" ref="universityService" />
+		<property name="userUniversityService"
+			ref="userUniversityService" />
+		<property name="userService" ref="userService" />
+		<property name="cityService" ref="cityService" />
+	</bean>
+
+	<bean name="/login" class="com.xiaonei.web.actions.LoginAction"
+		scope="prototype">
+
+		<property name="userService" ref="userService" />
+
+	</bean>
+	<bean name="/modify" class="com.xiaonei.web.actions.ModifyAction">
+		<property name="userService" ref="userService" />
+
+	</bean>
+	<bean name="/mail" class="com.xiaonei.web.actions.MailAction">
+		<property name="userService" ref="userService" />
+		<property name="mailService" ref="mailService" />
+
+	</bean>
+
+	<bean name="/profile"
+		class="com.xiaonei.web.actions.ProfileAction" scope="prototype">
+		<property name="blogService" ref="blogService" />
+		<property name="blogsortService" ref="blogsortService" />
+		<property name="userService" ref="userService" />
+		<property name="messageService" ref="messageService" />
+		<property name="usermessagecommentService" ref="usermessagecommentService" />
+		<property name="albumService" ref="albumService" />
+		<property name="uservisitedService" ref="uservisitedService" />
+		<property name="friendService" ref="friendService" />
+		<property name="specialfriendService" ref="specialfriendService" />
+		
+	</bean>
+	<bean name="/album" class="com.xiaonei.web.actions.AlbumAction"
+		scope="prototype">
+		<property name="userService" ref="userService" />
+		<property name="albumService" ref="albumService" />
+		<property name="albumsortService" ref="albumsortService" />
+		
+	</bean>
+	<bean name="/albumsort" class="com.xiaonei.web.actions.AlbumsortAction"
+		scope="prototype">
+		<property name="albumsortService" ref="albumsortService" />
+	
+	</bean>
+	<bean name="/friend" class="com.xiaonei.web.actions.FriendAction"
+		scope="prototype">
+		<property name="friendService" ref="friendService" />
+		<property name="userService" ref="userService" />
+		<property name="specialfriendService" ref="specialfriendService" />
+	</bean>
+	<bean name="/specialfriend" class="com.xiaonei.web.actions.SpecialfriendAction"
+		scope="prototype">
+		
+		<property name="specialfriendService" ref="specialfriendService" />
+	</bean>
+	<bean name="/blog" class="com.xiaonei.web.actions.BlogAction"
+		scope="prototype">
+		
+		<property name="blogService" ref="blogService" />
+		<property name="blogsortService" ref="blogsortService" />
+		<property name="userService" ref="userService" />
+	</bean>
+	<bean name="/blogsort" class="com.xiaonei.web.actions.BlogsortAction"
+		scope="prototype">
+		<property name="blogsortService" ref="blogsortService" />
+	
+	</bean>
+	<bean name="/search" class="com.xiaonei.web.actions.SearchAction"
+		scope="prototype">
+		<property name="userService" ref="userService" />
+	</bean>
+	<bean name="/message" class="com.xiaonei.web.actions.MessageAction"
+		scope="prototype">
+		<property name="messageService" ref="messageService" />
+		<property name="userService" ref="userService" />
+		
+	</bean>
+	<bean name="/usermessagecomment" class="com.xiaonei.web.actions.UsermessagecommentAction"
+		scope="prototype">
+		<property name="usermessagecommentService" ref="usermessagecommentService" />
+		<property name="messageService" ref="messageService" />
+		<property name="userService" ref="userService" />
+		
+	</bean>
+
+	<!--  <bean id="openSessionInViewInterceptor"
+		class="org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>-->
+	<!-- 配置事务管理器，统一管理sessionFactory的事务 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 启用注解 -->
+	<tx:annotation-driven
+		transaction-manager="txManager" />
+
+
+</beans>

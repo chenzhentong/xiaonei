@@ -1,0 +1,29 @@
+
+.nowPhoto
+{
+	margin:10px;
+	/*background-color:red;*/
+	height:200px;
+	width:290px;
+	float:left;
+	line-height:30px;
+	
+}
+.uploadPhoto
+{
+	
+	/*background-color:red;*/
+	height:200px;
+	width:530px;
+	float:left;
+	padding-left:10px;
+	padding-top:10px;
+	line-height:30px;
+	
+}
+.nowPhoto img
+{
+	padding:10px;
+	width:100px;
+	height:100px;
+}

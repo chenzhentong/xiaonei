@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 映射文件需要dtd指定格式 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiaonei.domain">
+	<class name="Album" lazy="true" table="album">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+		<property name="title" type="java.lang.String">
+			<column name="title" length="64" />
+		</property>
+		<property name="photo" type="java.lang.String">
+			<column name="photo" length="128" />
+		</property>
+		<property name="photo2" type="java.lang.String">
+			<column name="photo2" length="128" />
+		</property>
+		
+		
+	
+		<many-to-one name="sort" column="sortId"/>
+		
+		
+		<property name="publihDate" type="java.util.Date">
+			<column name="publishDate" />
+		</property>
+		<many-to-one name="publisher" column="publisherId"/>
+		
+		
+	
+	</class>
+
+</hibernate-mapping>
